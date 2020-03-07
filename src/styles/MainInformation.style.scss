@@ -1,0 +1,16 @@
+.main-information {
+  display: grid;
+  grid-template-columns: 100%;
+  div {
+    padding: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.05rem;
+  }
+  h3 {
+    padding-left: 10px;
+  }
+  h3,
+  div {
+    text-align: left;
+  }
+}

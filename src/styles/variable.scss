@@ -1,0 +1,43 @@
+$primary-color-green: hsl(120, 39%, 39%);
+$primary-color-text-grey: hsla(0, 0%, 51%, 0.781);
+
+$breakpoints: (
+  "extra-small": (
+    max-width: 390px
+  ),
+  "small": (
+    max-width: 835px
+  ),
+  "medium": (
+    max-width: 835px
+  ),
+  "large": (
+    min-width: 1000px
+  ),
+  "huge": (
+    min-width: 1200px
+  )
+);
+
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

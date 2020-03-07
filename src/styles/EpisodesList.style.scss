@@ -1,0 +1,37 @@
+@import "./variable.scss";
+
+.container-episodes {
+  display: grid;
+  grid-template-columns: 100%;
+  .container-episodes-list-season {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    border-bottom: 1px dotted hsla(0, 1%, 60%, 0.651);
+    @include respond-to("medium") {
+      grid-template-columns: 70% 30%;
+    }
+    @include respond-to("extra-small") {
+      grid-template-columns: 100%;
+      div:nth-child(2) {
+        margin-top: 0px;
+        margin-bottom: 30px;
+      }
+    }
+    div:nth-child(2) {
+      margin-top: 30px;
+    }
+  }
+  p:nth-child(1) {
+    font-size: 1.2rem;
+  }
+  p:nth-child(2) {
+    margin-top: -10px;
+    color: $primary-color-text-grey;
+    font-size: 1rem;
+  }
+
+  p {
+    text-align: left;
+    padding-left: 40px;
+  }
+}

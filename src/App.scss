@@ -1,0 +1,24 @@
+@import "./styles/variable.scss";
+
+.App {
+  text-align: center;
+  background-color: hsla(0, 5%, 92%, 0.932);
+}
+
+.primary-link {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  background-color: $primary-color-green;
+  padding: 10px;
+  vertical-align: middle;
+  border-radius: 4px;
+  box-shadow: 0 4px 11px -2px hsl(0, 0%, 50%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  @include respond-to("small") {
+    grid-template-columns: 100%;
+  }
+}

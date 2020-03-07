@@ -1,0 +1,11 @@
+.container-menu-season {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-column-gap: 10px;
+  padding: 35px;
+  div {
+    vertical-align: middle;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
