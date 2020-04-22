@@ -14,7 +14,7 @@ const EpisodesList = (props: Props) => {
     <div>
       <h3>episode list</h3>
       <div className="container-episodes" data-cy="container-episodes">
-        {list.map((episode, index) => (
+        {list.map((episode: TVMazeShowEpisodes, index: number) => (
           <div
             className="container-episodes-list-season"
             data-cy="container-episodes-list-season"

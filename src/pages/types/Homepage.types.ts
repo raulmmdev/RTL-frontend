@@ -6,10 +6,6 @@ export interface FilteredSeason {
   [key: number]: TVMazeShowEpisodes[];
 }
 
-export interface State {
-  season: number;
-}
-
 export interface Props {
   view: string;
   fetchTVShows: (id: string) => void;
